@@ -47,6 +47,20 @@ const px = (n: number) => `${n * scale}px`;
 
 Rule of thumb: write every size in **art pixels** and wrap it in `px()`.
 
+### Debug overlay
+
+Add `debug` to the provider to show the current scale, the window size, and how many art pixels fit in the window:
+
+```tsx
+<PixelScaleProvider baseWidth={320} baseHeight={180} debug>
+```
+
+```
+scale: 4 | window: 1280×720 | art: 320×180
+```
+
+Remove it (or set `debug={false}`) before shipping.
+
 ## 2. The `.pixelated` class
 
 Browsers smooth images when they scale them up, which blurs pixel art. Put `.pixelated` on any `<img>`, or on any element with a `background-image`, to keep the edges sharp:
