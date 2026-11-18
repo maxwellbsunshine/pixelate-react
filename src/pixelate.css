@@ -1,0 +1,22 @@
+/* Pixel fonts. Font @imports must come before any other rule,
+   including `@import "tailwindcss";` if you use Tailwind. */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+/* Keep hard pixel edges when an image or background is scaled up.
+   `pixelated` comes last so browsers that support it use it. */
+.pixelated {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+/* Chunky pixel font for titles and labels. */
+.pixel-font {
+    font-family: "Press Start 2P", "Roboto Mono", monospace;
+}
+
+/* Readable monospace font for body text and inputs. */
+.mono-font {
+    font-family: "Roboto Mono", monospace;
+}
