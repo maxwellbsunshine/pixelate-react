@@ -12,13 +12,33 @@ export default function Page() {
   const px = (artPixels: number) => `${artPixels * scale}px`;
 
   return (
-    <main style={{ display: 'grid', placeItems: 'center', gap: px(8), height: '100vh' }}>
-      {/* sprite.png is 8x8, so it is drawn at 8 art pixels. */}
-      <img src="/sprite.png" alt="Smiley" className="pixelated" width={8 * scale} height={8 * scale} />
-
-      <h1 className="pixel-font" style={{ fontSize: px(8), margin: 0 }}>Hello, pixels!</h1>
-
-      <p className="mono-font" style={{ fontSize: px(5), margin: 0 }}>scale: {scale}x</p>
+    <main
+      className="
+      pixelated
+      flex
+      items-center
+      justify-center
+      w-screen
+      h-screen
+      overflow-hidden
+      "
+      style={{
+        backgroundColor: '#A4EAFF', // blue sky, shows through the transparent top of the image
+        backgroundImage: "url('/background.png')",
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center bottom',
+        backgroundSize: `${px(100)} ${px(60)}`, // background.png is 100x60 art pixels
+      }}
+    >
+      <h1 className="pixel-font text-center"
+      style={{ 
+        fontSize: px(2), 
+        margin: 0, 
+        color: '#141a22', 
+        backgroundColor: '#A4EAFF', // blue sky, shows through the transparent top of the image
+        }}>
+        Hello World!
+      </h1>
     </main>
   );
 }

@@ -93,4 +93,11 @@ Press Start 2P is drawn on an 8px grid, so it looks sharpest at multiples of 8px
 
 ## Example
 
-`example/` is a Next.js App Router page that uses all three tools. To try it, copy `example/app/*` into a new Next.js app's `app/` folder and `example/public/sprite.png` into its `public/` folder, then change the import paths to point at wherever you put `src/`.
+`example/` is a small Next.js app: a pixel-art background over a blue sky with "Hello World!" in the pixel font, and the debug overlay turned on. To run it:
+
+```sh
+npm install
+npm run dev
+```
+
+Then open the URL it prints (usually http://localhost:3000) and resize the window to watch the scale change.
